@@ -30,6 +30,16 @@ brew tap vrypan/tap
 
 ---
 
+### fcp
+
+**Version:** 1.1.2  
+**Description:** Copy data from/to farcaster and the local filesystem  
+**Project page:** https://github.com/vrypan/fcp  
+**License:** MIT  
+**Installation:** `brew install vrypan/tap/fcp`
+
+---
+
 ### snappub-tools
 
 **Version:** 0.1.1  
