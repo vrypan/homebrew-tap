@@ -58,28 +58,25 @@ def generate_readme_content(formulas: list) -> str:
 
 ```bash
 brew tap vrypan/tap
+brew install <FORMULA>
 ```
+
+Alternatively: `brew install vrypan/tap/<FORMULA>`
 
 ## Available Formulae
 
+| Formula | Version | Description | Project Page |
+|---------|---------|-------------|--------------|
 """
 
     # Sort formulas by name
     formulas.sort(key=lambda x: x["name"].lower())
 
     for formula in formulas:
-        content += f"### {formula['filename']}\n\n"
-        content += f"**Version:** {formula['version']}  \n"
-        content += f"**Description:** {formula['description']}  \n"
+        homepage_link = f"[GitHub]({formula['homepage']})" if formula['homepage'] else ""
+        content += f"| **{formula['filename']}** | {formula['version']} | {formula['description']} | {homepage_link} |\n"
 
-        if formula['homepage']:
-            content += f"**Project page:** {formula['homepage']}  \n"
-
-        if formula['license']:
-            content += f"**License:** {formula['license']}  \n"
-
-        content += f"**Installation:** `brew install vrypan/tap/{formula['filename']}`\n\n"
-        content += "---\n\n"
+    content += "\n## License\n\nMIT\n"
 
     return content
 

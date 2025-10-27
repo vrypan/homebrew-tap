@@ -6,57 +6,21 @@
 
 ```bash
 brew tap vrypan/tap
+brew install <FORMULA>
 ```
+
+Alternatively: `brew install vrypan/tap/<FORMULA>`
 
 ## Available Formulae
 
-### bckt
+| Formula | Version | Description | Project Page |
+|---------|---------|-------------|--------------|
+| **bckt** | 0.6.4 | bckt is an opinionated but flexible static site generator for blogs | [GitHub](https://github.com/vrypan/bckt) |
+| **fargo** | 0.4.4 | fargo is a CLI interface to Farcaster written in Go. | [GitHub](https://github.com/vrypan/fargo) |
+| **fc-appkey** | 0.1.3 | Farcaster Application Key Generator | [GitHub](https://github.com/vrypan/fc-appkey) |
+| **fcp** | 1.1.2 | Copy data from/to farcaster and the local filesystem | [GitHub](https://github.com/vrypan/fcp) |
+| **snappub-tools** | 0.1.1 | A set of tools that implement the basic functionality of snappub | [GitHub](https://github.com/vrypan/snappub-tools) |
 
-**Version:** 0.6.4  
-**Description:** bckt is an opinionated but flexible static site generator for blogs  
-**Project page:** https://github.com/vrypan/bckt  
-**License:** MIT  
-**Installation:** `brew install vrypan/tap/bckt`
+## License
 
----
-
-### fargo
-
-**Version:** 0.4.4  
-**Description:** fargo is a CLI interface to Farcaster written in Go.  
-**Project page:** https://github.com/vrypan/fargo  
-**License:** MIT  
-**Installation:** `brew install vrypan/tap/fargo`
-
----
-
-### fc-appkey
-
-**Version:** 0.1.3  
-**Description:** Farcaster Application Key Generator  
-**Project page:** https://github.com/vrypan/fc-appkey  
-**License:** MIT  
-**Installation:** `brew install vrypan/tap/fc-appkey`
-
----
-
-### fcp
-
-**Version:** 1.1.2  
-**Description:** Copy data from/to farcaster and the local filesystem  
-**Project page:** https://github.com/vrypan/fcp  
-**License:** MIT  
-**Installation:** `brew install vrypan/tap/fcp`
-
----
-
-### snappub-tools
-
-**Version:** 0.1.1  
-**Description:** A set of tools that implement the basic functionality of snappub  
-**Project page:** https://github.com/vrypan/snappub-tools  
-**License:** MIT  
-**Installation:** `brew install vrypan/tap/snappub-tools`
-
----
-
+MIT
