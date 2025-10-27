@@ -20,6 +20,16 @@ brew tap vrypan/tap
 
 ---
 
+### fargo
+
+**Version:** 0.4.4  
+**Description:** fargo is a CLI interface to Farcaster written in Go.  
+**Project page:** https://github.com/vrypan/fargo  
+**License:** MIT  
+**Installation:** `brew install vrypan/tap/fargo`
+
+---
+
 ### fc-appkey
 
 **Version:** 0.1.3  
