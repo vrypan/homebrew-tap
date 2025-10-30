@@ -5,21 +5,21 @@
 class SnappubTools < Formula
   desc "A set of tools that implement the basic functionality of snappub"
   homepage "https://github.com/vrypan/snappub-tools"
-  version "0.1.2"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vrypan/snappub-tools/releases/download/v0.1.2/snappub-tools_Darwin_x86_64.tar.gz"
-      sha256 "0e76880112a0d9cdcd4a6d970523690b02d67d7aa38297c07ba735427d1b644c"
+      url "https://github.com/vrypan/snappub-tools/releases/download/v0.2.0/snappub-tools_Darwin_x86_64.tar.gz"
+      sha256 "8cffadefa41cd36a1b00b06be99d8573c35d0b8098e7c2f7f7c9b46630cec39e"
 
       def install
         bin.install "snappub"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vrypan/snappub-tools/releases/download/v0.1.2/snappub-tools_Darwin_arm64.tar.gz"
-      sha256 "8b16015973ec7f014a5db49edc54520578319d7250626a74cbed26624c6b952d"
+      url "https://github.com/vrypan/snappub-tools/releases/download/v0.2.0/snappub-tools_Darwin_arm64.tar.gz"
+      sha256 "d5f2a5396b46bb13d74e0644e00bb389e12de824644c934bef43901fa384e7af"
 
       def install
         bin.install "snappub"
@@ -29,15 +29,15 @@ class SnappubTools < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vrypan/snappub-tools/releases/download/v0.1.2/snappub-tools_Linux_x86_64.tar.gz"
-      sha256 "f22547a2cacd219d0c595d29823421aa4597ab09eb89084e7ca0ef14125e0cbd"
+      url "https://github.com/vrypan/snappub-tools/releases/download/v0.2.0/snappub-tools_Linux_x86_64.tar.gz"
+      sha256 "fe0c2e05bcf74d4970f0d623ac3b4e341909bb986f29720595fc45faa44c0eb4"
       def install
         bin.install "snappub"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vrypan/snappub-tools/releases/download/v0.1.2/snappub-tools_Linux_arm64.tar.gz"
-      sha256 "b3382f599d79c185e6a39ae4631b625291982beb0391869220c1eb80c41cbd52"
+      url "https://github.com/vrypan/snappub-tools/releases/download/v0.2.0/snappub-tools_Linux_arm64.tar.gz"
+      sha256 "861364440e8102b624db12664cc0e25a6ea83f60f8fe2ccbf2e8b68bb6f04e03"
       def install
         bin.install "snappub"
       end
