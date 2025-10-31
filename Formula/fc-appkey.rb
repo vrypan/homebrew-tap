@@ -5,21 +5,21 @@
 class FcAppkey < Formula
   desc "Farcaster Application Key Generator"
   homepage "https://github.com/vrypan/fc-appkey"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vrypan/fc-appkey/releases/download/v0.1.4/fc-appkey_Darwin_x86_64.tar.gz"
-      sha256 "61abda99d0f910afa9494cb777b2ba98d0d885c962fd9f7930a643e762a7e29e"
+      url "https://github.com/vrypan/fc-appkey/releases/download/v0.1.5/fc-appkey_Darwin_x86_64.tar.gz"
+      sha256 "3e73b6b2e29fec5db92ba180f870cc50c6792f76a78f4d5c248b246ac80ed86e"
 
       def install
         bin.install "fc-appkey"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vrypan/fc-appkey/releases/download/v0.1.4/fc-appkey_Darwin_arm64.tar.gz"
-      sha256 "c6774b3ca100858f7b0cbabd7d55160740b72158d4356bab0ae8bf5de9efb0d6"
+      url "https://github.com/vrypan/fc-appkey/releases/download/v0.1.5/fc-appkey_Darwin_arm64.tar.gz"
+      sha256 "b0d3bd677bc980a93b315e4f06c0d5b13f2c5de8a5f570c43f1027e42a358006"
 
       def install
         bin.install "fc-appkey"
@@ -29,15 +29,15 @@ class FcAppkey < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vrypan/fc-appkey/releases/download/v0.1.4/fc-appkey_Linux_x86_64.tar.gz"
-      sha256 "ad3d9943ac73c14fa3542fdc5922a16b4b30db82e40c4fb74cf607bb773834e0"
+      url "https://github.com/vrypan/fc-appkey/releases/download/v0.1.5/fc-appkey_Linux_x86_64.tar.gz"
+      sha256 "833caf245a31258f2a3317df854265454bc53e6ddd976db1043903544a0f8f52"
       def install
         bin.install "fc-appkey"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vrypan/fc-appkey/releases/download/v0.1.4/fc-appkey_Linux_arm64.tar.gz"
-      sha256 "5888e9ae09f8bd8e1bb316cce14b9c4b97d8df28bc2ba4912ae0c094ac23367c"
+      url "https://github.com/vrypan/fc-appkey/releases/download/v0.1.5/fc-appkey_Linux_arm64.tar.gz"
+      sha256 "84940260f714accf91484fe07380f8b3137b5ced14ca4a53de95c47a7f9526b7"
       def install
         bin.install "fc-appkey"
       end
