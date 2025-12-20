@@ -5,13 +5,13 @@
 class Fcp < Formula
   desc "Copy data from/to farcaster and the local filesystem"
   homepage "https://github.com/vrypan/fcp"
-  version "1.1.2"
+  version "1.1.3"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/vrypan/fcp/releases/download/v1.1.2/fcp_Darwin_x86_64.tar.gz"
-      sha256 "474001722e6a6b9a48e2ac49227ca6028de46cbb52788928a9c0dd6a6d1f36bb"
+      url "https://github.com/vrypan/fcp/releases/download/v1.1.3/fcp_Darwin_x86_64.tar.gz"
+      sha256 "46311ffa0102532658302d5b4e2b45f1822abe8ec49906f02756aedcced2b08d"
 
       def install
         bin.install "fcp"
@@ -19,8 +19,8 @@ class Fcp < Formula
       end
     end
     on_arm do
-      url "https://github.com/vrypan/fcp/releases/download/v1.1.2/fcp_Darwin_arm64.tar.gz"
-      sha256 "1c6e654dfdd1e8215d1d6ed3a466233a0775e22e728873ce606ae280f9811070"
+      url "https://github.com/vrypan/fcp/releases/download/v1.1.3/fcp_Darwin_arm64.tar.gz"
+      sha256 "e394ba659a76955d0666bb60300edae7bbe7f0064ff137bc6cd2a500102ef856"
 
       def install
         bin.install "fcp"
@@ -32,8 +32,8 @@ class Fcp < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/vrypan/fcp/releases/download/v1.1.2/fcp_Linux_x86_64.tar.gz"
-        sha256 "9fb1dcf775354b3ac4b324dcf97f0dbefdd94769fab2a341a1a24773258ddaa5"
+        url "https://github.com/vrypan/fcp/releases/download/v1.1.3/fcp_Linux_x86_64.tar.gz"
+        sha256 "f12a082aa3f858be8b0690313e92b6bb7caa77ee335e110bc822c49324a95d0a"
 
         def install
           bin.install "fcp"
@@ -43,8 +43,8 @@ class Fcp < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/vrypan/fcp/releases/download/v1.1.2/fcp_Linux_arm64.tar.gz"
-        sha256 "a9f7a203d9c5d1b01221fd5b9ec879a187ed87f651a26f0c33d920bf4876449b"
+        url "https://github.com/vrypan/fcp/releases/download/v1.1.3/fcp_Linux_arm64.tar.gz"
+        sha256 "c2b025abdf486517fc33bbb2918a39deb248239c4919dea13a183ef50aea07c8"
 
         def install
           bin.install "fcp"
