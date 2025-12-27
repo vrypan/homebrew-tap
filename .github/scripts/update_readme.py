@@ -65,18 +65,41 @@ Alternatively: `brew install vrypan/tap/<FORMULA>`
 
 ## Available Formulae
 
-| Formula | Version | Description | Project Page |
-|---------|---------|-------------|--------------|
+<table>
+  <thead>
+    <tr>
+      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; white-space:nowrap;">Formula</th>
+      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;">Version</th>
+      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;">Description</th>
+      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;">Project Page</th>
+    </tr>
+  </thead>
+  <tbody>
 """
 
     # Sort formulas by name
     formulas.sort(key=lambda x: x["name"].lower())
 
-    for formula in formulas:
-        homepage_link = f"[GitHub]({formula['homepage']})" if formula['homepage'] else ""
-        content += f"| **{formula['filename']}** | {formula['version']} | {formula['description']} | {homepage_link} |\n"
+    for index, formula in enumerate(formulas):
+        # Alternate row backgrounds
+        row_bg = "#ffffff" if index % 2 == 0 else "#f6f8fa"
+        homepage_link = f'<a href="{formula["homepage"]}">GitHub</a>' if formula['homepage'] else ""
 
-    content += "\n## License\n\nMIT\n"
+        content += f"""    <tr style="background:{row_bg};">
+      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;">{formula['filename']}</td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;">{formula['version']}</td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;">{formula['description']}</td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;">{homepage_link}</td>
+    </tr>
+"""
+
+    content += """  </tbody>
+</table>
+
+## License
+
+MIT
+"""
 
     return content
 
