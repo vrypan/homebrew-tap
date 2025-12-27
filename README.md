@@ -19,6 +19,7 @@ Alternatively: `brew install vrypan/tap/<FORMULA>`
 | **fargo** | 0.4.5 | fargo is a CLI interface to Farcaster written in Go. | [GitHub](https://github.com/vrypan/fargo) |
 | **fc-appkey** | 0.1.5 | Farcaster Application Key Generator | [GitHub](https://github.com/vrypan/fc-appkey) |
 | **fcp** | 1.1.3 | Copy data from/to farcaster and the local filesystem | [GitHub](https://github.com/vrypan/fcp) |
+| **lemon3** | 0.4.1 | lemon3 is a filesharing system using Farcaster and IPFS. | [GitHub](https://github.com/vrypan/lemon3) |
 | **snappub-tools** | 0.2.2 | A set of tools that implement the basic functionality of snappub | [GitHub](https://github.com/vrypan/snappub-tools) |
 
 ## License
