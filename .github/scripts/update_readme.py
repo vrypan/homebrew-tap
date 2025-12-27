@@ -105,7 +105,7 @@ Alternatively: `brew install vrypan/tap/<FORMULA>`
         homepage_link = f'<a href="{formula["homepage"]}">GitHub</a>' if formula['homepage'] else ""
 
         # Append last updated date to description
-        description_with_date = f"{formula['description']} <em>(Last updated: {formula['last_updated']})</em>"
+        description_with_date = f"{formula['description']} <br><em>(Last updated: {formula['last_updated']})</em>"
 
         content += f"""    <tr style="background:{row_bg};">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>{formula['filename']}</small></td>
