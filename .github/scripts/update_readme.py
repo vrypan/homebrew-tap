@@ -87,11 +87,11 @@ Alternatively: `brew install vrypan/tap/<FORMULA>`
 <table>
   <thead>
     <tr>
-      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; white-space:nowrap; font-size:12px;">Formula</th>
-      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; font-size:12px;">Version</th>
-      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; font-size:12px;">Description</th>
-      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; white-space:nowrap; font-size:12px;">Last Updated</th>
-      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; font-size:12px;">Project Page</th>
+      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; white-space:nowrap;"><small>Formula</small></th>
+      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;"><small>Version</small></th>
+      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;"><small>Description</small></th>
+      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; white-space:nowrap;"><small>Last Updated</small></th>
+      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;"><small>Project Page</small></th>
     </tr>
   </thead>
   <tbody>
@@ -106,11 +106,11 @@ Alternatively: `brew install vrypan/tap/<FORMULA>`
         homepage_link = f'<a href="{formula["homepage"]}">GitHub</a>' if formula['homepage'] else ""
 
         content += f"""    <tr style="background:{row_bg};">
-      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap; font-size:12px;">{formula['filename']}</td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px; font-size:12px;">{formula['version']}</td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px; font-size:12px;">{formula['description']}</td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap; font-size:12px;">{formula['last_updated']}</td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px; font-size:12px;">{homepage_link}</td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>{formula['filename']}</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>{formula['version']}</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>{formula['description']}</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>{formula['last_updated']}</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>{homepage_link}</small></td>
     </tr>
 """
 
