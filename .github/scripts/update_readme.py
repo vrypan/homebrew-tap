@@ -90,7 +90,6 @@ Alternatively: `brew install vrypan/tap/<FORMULA>`
       <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; white-space:nowrap;"><small>Formula</small></th>
       <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;"><small>Version</small></th>
       <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;"><small>Description</small></th>
-      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; white-space:nowrap;"><small>Last Updated</small></th>
       <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;"><small>Project Page</small></th>
     </tr>
   </thead>
@@ -105,11 +104,13 @@ Alternatively: `brew install vrypan/tap/<FORMULA>`
         row_bg = "#ffffff" if index % 2 == 0 else "#f6f8fa"
         homepage_link = f'<a href="{formula["homepage"]}">GitHub</a>' if formula['homepage'] else ""
 
+        # Append last updated date to description
+        description_with_date = f"{formula['description']} <em>(Last updated: {formula['last_updated']})</em>"
+
         content += f"""    <tr style="background:{row_bg};">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>{formula['filename']}</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>{formula['version']}</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>{formula['description']}</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>{formula['last_updated']}</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>{description_with_date}</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>{homepage_link}</small></td>
     </tr>
 """
