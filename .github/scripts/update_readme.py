@@ -5,8 +5,23 @@ Parse Homebrew formulas and update README.md with formula information.
 
 import os
 import re
+import subprocess
 from pathlib import Path
 from typing import Dict, Optional
+
+
+def get_last_commit_date(file_path: Path) -> str:
+    """Get the last commit date for a file."""
+    try:
+        result = subprocess.run(
+            ["git", "log", "-1", "--format=%cd", "--date=short", str(file_path)],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        return result.stdout.strip() or "Unknown"
+    except subprocess.CalledProcessError:
+        return "Unknown"
 
 
 def parse_formula(formula_path: Path) -> Optional[Dict[str, str]]:
@@ -35,13 +50,17 @@ def parse_formula(formula_path: Path) -> Optional[Dict[str, str]]:
         license_match = re.search(r'license\s+"([^"]+)"', content)
         license_info = license_match.group(1) if license_match else ""
 
+        # Get last commit date
+        last_updated = get_last_commit_date(formula_path)
+
         return {
             "name": class_match.group(1),
             "description": description,
             "homepage": homepage,
             "version": version,
             "license": license_info,
-            "filename": formula_path.stem
+            "filename": formula_path.stem,
+            "last_updated": last_updated
         }
     except Exception as e:
         print(f"Error parsing {formula_path}: {e}")
@@ -71,6 +90,7 @@ Alternatively: `brew install vrypan/tap/<FORMULA>`
       <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; white-space:nowrap;">Formula</th>
       <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;">Version</th>
       <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;">Description</th>
+      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; white-space:nowrap;">Last Updated</th>
       <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;">Project Page</th>
     </tr>
   </thead>
@@ -89,6 +109,7 @@ Alternatively: `brew install vrypan/tap/<FORMULA>`
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;">{formula['filename']}</td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;">{formula['version']}</td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;">{formula['description']}</td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;">{formula['last_updated']}</td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;">{homepage_link}</td>
     </tr>
 """
