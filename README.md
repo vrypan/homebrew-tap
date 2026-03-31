@@ -27,7 +27,7 @@ Alternatively: `brew install vrypan/tap/<FORMULA>` or `brew install --cask vrypa
     <tr style="background:#ffffff;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>stash</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Cask</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.1.3</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.1.4</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>A local store for pipeline output and ad hoc file snapshots. <br><em>(Last updated: 2026-04-01)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/stash">GitHub</a></small></td>
     </tr>
