@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'Formula/**'
+      - 'Casks/**'
   workflow_dispatch:
 
 permissions:

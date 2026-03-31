@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
-"""
-Parse Homebrew formulas and update README.md with formula information.
-"""
+"""Parse Homebrew formulae and casks and update README.md."""
 
-import os
 import re
 import subprocess
 from pathlib import Path
@@ -24,15 +21,21 @@ def get_last_commit_date(file_path: Path) -> str:
         return "Unknown"
 
 
-def parse_formula(formula_path: Path) -> Optional[Dict[str, str]]:
-    """Parse a Homebrew formula file and extract metadata."""
+def parse_package(package_path: Path, package_type: str) -> Optional[Dict[str, str]]:
+    """Parse a Homebrew formula or cask file and extract metadata."""
     try:
-        content = formula_path.read_text()
+        content = package_path.read_text()
 
-        # Extract class name (formula name)
-        class_match = re.search(r'class\s+(\w+)\s+<\s+Formula', content)
-        if not class_match:
-            return None
+        if package_type == "formula":
+            name_match = re.search(r'class\s+(\w+)\s+<\s+Formula', content)
+            if not name_match:
+                return None
+            display_name = name_match.group(1)
+        else:
+            name_match = re.search(r'cask\s+"([^"]+)"', content)
+            if not name_match:
+                return None
+            display_name = name_match.group(1)
 
         # Extract description
         desc_match = re.search(r'desc\s+"([^"]+)"', content)
@@ -51,27 +54,28 @@ def parse_formula(formula_path: Path) -> Optional[Dict[str, str]]:
         license_info = license_match.group(1) if license_match else ""
 
         # Get last commit date
-        last_updated = get_last_commit_date(formula_path)
+        last_updated = get_last_commit_date(package_path)
 
         return {
-            "name": class_match.group(1),
+            "name": display_name,
             "description": description,
             "homepage": homepage,
             "version": version,
             "license": license_info,
-            "filename": formula_path.stem,
-            "last_updated": last_updated
+            "filename": package_path.stem,
+            "last_updated": last_updated,
+            "type": package_type,
         }
     except Exception as e:
-        print(f"Error parsing {formula_path}: {e}")
+        print(f"Error parsing {package_path}: {e}")
         return None
 
 
-def generate_readme_content(formulas: list) -> str:
-    """Generate README.md content with formula information."""
+def generate_readme_content(packages: list) -> str:
+    """Generate README.md content with package information."""
     content = """# homebrew-tap
 
-[vrypan's](https://github.com/vrypan) custom formulae.
+[vrypan's](https://github.com/vrypan) custom Homebrew packages.
 
 ## Installation
 
@@ -80,14 +84,15 @@ brew tap vrypan/tap
 brew install <FORMULA>
 ```
 
-Alternatively: `brew install vrypan/tap/<FORMULA>`
+Alternatively: `brew install vrypan/tap/<FORMULA>` or `brew install --cask vrypan/tap/<CASK>`
 
-## Available Formulae
+## Available Packages
 
 <table>
   <thead>
     <tr>
-      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; white-space:nowrap;"><small>Formula</small></th>
+      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left; white-space:nowrap;"><small>Package</small></th>
+      <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;"><small>Type</small></th>
       <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;"><small>Version</small></th>
       <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;"><small>Description</small></th>
       <th style="background:#f6f8fa; padding:6px 12px; border:1px solid #d0d7de; text-align:left;"><small>Project Page</small></th>
@@ -96,20 +101,21 @@ Alternatively: `brew install vrypan/tap/<FORMULA>`
   <tbody>
 """
 
-    # Sort formulas by name
-    formulas.sort(key=lambda x: x["name"].lower())
+    # Sort packages by type, then name
+    packages.sort(key=lambda x: (x["type"], x["name"].lower()))
 
-    for index, formula in enumerate(formulas):
+    for index, package in enumerate(packages):
         # Alternate row backgrounds
         row_bg = "#ffffff" if index % 2 == 0 else "#f6f8fa"
-        homepage_link = f'<a href="{formula["homepage"]}">GitHub</a>' if formula['homepage'] else ""
+        homepage_link = f'<a href="{package["homepage"]}">GitHub</a>' if package["homepage"] else ""
 
         # Append last updated date to description
-        description_with_date = f"{formula['description']} <br><em>(Last updated: {formula['last_updated']})</em>"
+        description_with_date = f"{package['description']} <br><em>(Last updated: {package['last_updated']})</em>"
 
         content += f"""    <tr style="background:{row_bg};">
-      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>{formula['filename']}</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>{formula['version']}</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>{package['filename']}</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>{package['type'].title()}</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>{package['version']}</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>{description_with_date}</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>{homepage_link}</small></td>
     </tr>
@@ -130,29 +136,38 @@ def main():
     """Main function to update README.md."""
     # Get repository root
     repo_root = Path(__file__).parent.parent.parent
-    formula_dir = repo_root / "Formula"
     readme_path = repo_root / "README.md"
+    package_dirs = {
+        "formula": repo_root / "Formula",
+        "cask": repo_root / "Casks",
+    }
 
-    if not formula_dir.exists():
-        print("Formula directory not found!")
+    if not any(path.exists() for path in package_dirs.values()):
+        print("No Formula or Casks directory found!")
         return
 
-    # Parse all formula files
-    formulas = []
-    for formula_file in sorted(formula_dir.glob("*.rb")):
-        formula_data = parse_formula(formula_file)
-        if formula_data:
-            formulas.append(formula_data)
-            print(f"Parsed: {formula_data['filename']} v{formula_data['version']}")
+    packages = []
+    for package_type, package_dir in package_dirs.items():
+        if not package_dir.exists():
+            continue
 
-    if not formulas:
-        print("No formulas found!")
+        for package_file in sorted(package_dir.glob("*.rb")):
+            package_data = parse_package(package_file, package_type)
+            if package_data:
+                packages.append(package_data)
+                print(
+                    f"Parsed {package_type}: "
+                    f"{package_data['filename']} v{package_data['version']}"
+                )
+
+    if not packages:
+        print("No packages found!")
         return
 
     # Generate and write README
-    readme_content = generate_readme_content(formulas)
+    readme_content = generate_readme_content(packages)
     readme_path.write_text(readme_content)
-    print(f"\nREADME.md updated with {len(formulas)} formula(e)")
+    print(f"\nREADME.md updated with {len(packages)} package(s)")
 
 
 if __name__ == "__main__":
