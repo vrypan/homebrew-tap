@@ -80,6 +80,13 @@ Alternatively: `brew install vrypan/tap/<FORMULA>` or `brew install --cask vrypa
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>A set of tools that implement the basic functionality of snappub <br><em>(Last updated: 2025-11-01)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/snappub-tools">GitHub</a></small></td>
     </tr>
+    <tr style="background:#ffffff;">
+      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>stash</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.4.1</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>A local store for pipeline output and ad hoc file snapshots. <br><em>(Last updated: 2026-04-02)</em></small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/stash">GitHub</a></small></td>
+    </tr>
   </tbody>
 </table>
 
