@@ -1,42 +1,49 @@
 class Stash < Formula
   desc "A local store for pipeline output and ad hoc file snapshots."
   homepage "https://github.com/vrypan/stash"
-  version "0.5.1"
+  version "0.5.2"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/vrypan/stash/releases/download/v0.5.1/stash-aarch64-apple-darwin.tar.xz"
-      sha256 "4f1941b0b2e39b039d5fe1117f3b8be420633a3264ef4994f1f1ae5a1d7337de"
+      url "https://github.com/vrypan/stash/releases/download/v0.5.2/stash-aarch64-apple-darwin.tar.xz"
+      sha256 "d25d67e08bc6890674b3fb311df85217f4b0c66f4edd18ae10ecb55545f16162"
     end
     on_intel do
-      url "https://github.com/vrypan/stash/releases/download/v0.5.1/stash-x86_64-apple-darwin.tar.xz"
-      sha256 "aaeadfe74bd261e27fe224068bba09cdbc76771c493fd0f01fb7ec96a476763b"
+      url "https://github.com/vrypan/stash/releases/download/v0.5.2/stash-x86_64-apple-darwin.tar.xz"
+      sha256 "65f3908c36b60e73e2e6381712e11525e7ab9e7c1bdc186f6ae1b46bd8d20ea2"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vrypan/stash/releases/download/v0.5.1/stash-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "bad24208b2e12ad0e05fb958edc61b4c60473e8fcb103f5702a54d0f9a7c4dbf"
+      url "https://github.com/vrypan/stash/releases/download/v0.5.2/stash-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "06be23e91b060bebc1e4f4a141d14d3446e7afb9ac56e07fcbc02643811acfcc"
     end
     on_intel do
-      url "https://github.com/vrypan/stash/releases/download/v0.5.1/stash-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9d1615db89b18f620fac2332369eaa704a97d080280b3bdda56d1cb2560591a4"
+      url "https://github.com/vrypan/stash/releases/download/v0.5.2/stash-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9dc002063a541e88511c76f0efeb0df685f0870c46789ebfb83622c67bea263a"
     end
   end
 
   def install
     if which("stash")
       installed = Utils.safe_popen_read("stash", "version").strip
-      if installed =~ /\Astash (\S+)\z/
-        existing_version = Version.new(Regexp.last_match(1))
+      version_text =
+        if installed =~ /\Astash (\S+)\z/
+          Regexp.last_match(1)
+        elsif installed =~ /\A\d+\.\d+\.\d+(?:[-+][^\s]+)?\z/
+          installed
+        end
+
+      if version_text
+        existing_version = Version.new(version_text)
         if existing_version < Version.new("0.5.0")
           odie <<~EOS
             stash #{existing_version} is installed.
             Automatic upgrade from versions older than 0.5.0 is not supported.
             Visit https://github.com/vrypan/stash for more info.
-            To force the upgrade:  first, then install again.
+            To force the upgrade: brew uninstall stash first, then install again.
           EOS
         end
       end
