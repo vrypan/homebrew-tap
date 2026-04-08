@@ -1,28 +1,28 @@
 class Stash < Formula
   desc "A local store for pipeline output and ad hoc file snapshots."
   homepage "https://github.com/vrypan/stash"
-  version "0.5.6"
+  version "0.5.7"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/vrypan/stash/releases/download/v0.5.6/stash-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "3339f148f2aa9cef009591b0910b18666196e781ded14ea01f581014f531bf58"
+      url "https://github.com/vrypan/stash/releases/download/v0.5.7/stash-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "ba97e746509c47d37f74c6851d2f496b578745d5eb4eda42e0bf75b4a7cbc273"
     end
     on_intel do
-      url "https://github.com/vrypan/stash/releases/download/v0.5.6/stash-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "bf7aa104b5d23ce6e764a114a345ae5e33b39f2a14a8e0456ea09d3cc87fa033"
+      url "https://github.com/vrypan/stash/releases/download/v0.5.7/stash-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "508ef33fa231e420715c2f7350ce2511dce0a924cdfaf3a90d4b0e3732365467"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vrypan/stash/releases/download/v0.5.6/stash-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ff3142098f7dba557191937caf3cb8717f8aac95f1812b0aed6a8b720ec5a5ef"
+      url "https://github.com/vrypan/stash/releases/download/v0.5.7/stash-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "aa2b6ecac6750be0482dad4da0d7ad2f535447bc59e1974cce103ac900219989"
     end
     on_intel do
-      url "https://github.com/vrypan/stash/releases/download/v0.5.6/stash-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "fdb431a60cd71cb7a8a90eee660888de9749a3b4f9fd3f671c1745740f90da53"
+      url "https://github.com/vrypan/stash/releases/download/v0.5.7/stash-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "21cdf7ba530f26145a7cc7440ea569154fa17a528c00ee05aa658d9c6e2e130f"
     end
   end
 
