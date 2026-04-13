@@ -1,28 +1,28 @@
 class Stash < Formula
   desc "A local store for pipeline output and ad hoc file snapshots."
   homepage "https://github.com/vrypan/stash"
-  version "0.7.0"
+  version "0.7.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/vrypan/stash/releases/download/v0.7.0/stash-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "6b07064a8a6966889165337d5bfdf6e7eb71f19fe3572778ccebca43fc0d6441"
+      url "https://github.com/vrypan/stash/releases/download/v0.7.1/stash-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "08fae7e6226a507d27bd743e8bd30f553a946a2dc5be32b0d885ca472d37ba81"
     end
     on_intel do
-      url "https://github.com/vrypan/stash/releases/download/v0.7.0/stash-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "d39968595a359dc34a837fa789675fc547431571ab88ec59afeaf5b060a151d1"
+      url "https://github.com/vrypan/stash/releases/download/v0.7.1/stash-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "29cb6f4128b6084321ef95e4844c4cbda98525b75ec5e631d515b78952cbf2a4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vrypan/stash/releases/download/v0.7.0/stash-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "98362d83ff12b3b971bde918f325b4fa20a2a0b2d2ce460ff6a73891ccee44c6"
+      url "https://github.com/vrypan/stash/releases/download/v0.7.1/stash-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "564101d676f51fd5b33d994b6f9af16a43e74326f4949ae98ff2bb7d6b6b3766"
     end
     on_intel do
-      url "https://github.com/vrypan/stash/releases/download/v0.7.0/stash-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "812a21fd03e4843305920ec53c91c20778f45f733d72b60d62eaddd0ab765baf"
+      url "https://github.com/vrypan/stash/releases/download/v0.7.1/stash-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "321d96fee246fd72777c41f82887d3a85ff0895874165ef3c261c242ac0e68dd"
     end
   end
 
@@ -50,15 +50,16 @@ class Stash < Formula
     end
 
     bin.install "stash"
+    bin.install "stash-completion"
     pkgshare.install "scripts" if Dir.exist?("scripts")
     (bash_completion/"stash").write Utils.safe_popen_read(
-      bin/"stash", "completion", "bash"
+      bin/"stash-completion", "bash"
     )
     (zsh_completion/"_stash").write Utils.safe_popen_read(
-      bin/"stash", "completion", "zsh"
+      bin/"stash-completion", "zsh"
     )
     (fish_completion/"stash.fish").write Utils.safe_popen_read(
-      bin/"stash", "completion", "fish"
+      bin/"stash-completion", "fish"
     )
   end
 
