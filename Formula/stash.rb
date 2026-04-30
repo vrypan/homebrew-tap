@@ -1,34 +1,34 @@
 class Stash < Formula
   desc "A local store for pipeline output and ad hoc file snapshots."
   homepage "https://github.com/vrypan/stash"
-  version "0.9.1"
+  version "0.10.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/vrypan/stash/releases/download/v0.9.1/stash-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "316a7b729c77600f16e562e31fcccd2dea236644681a47e0b05ecbd6c0f7b057"
+      url "https://github.com/vrypan/stash/releases/download/v0.10.0/stash-aarch64-macos.tar.xz"
+      sha256 "d7a42353bc2c147735e1d3cb6f8fe91447975997022ff16b6e635fe11de263fe"
     end
     on_intel do
-      url "https://github.com/vrypan/stash/releases/download/v0.9.1/stash-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "186a5530caae36aeecfa3cbc015b5772d2719668a00ba8d2f5948540cf768f42"
+      url "https://github.com/vrypan/stash/releases/download/v0.10.0/stash-x86_64-macos.tar.xz"
+      sha256 "216e70076e33c31b0f2a18d449d43cae56508f74c1c7a49e516a35107531f354"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vrypan/stash/releases/download/v0.9.1/stash-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f12a19c9761e0a17c21c0f771cd2384157dde043688ddfe5ed7653893eb40474"
+      url "https://github.com/vrypan/stash/releases/download/v0.10.0/stash-aarch64-linux-gnu.tar.xz"
+      sha256 "0b49bf823a379ed3869f03beab3cc9b3c2ecdf888b4b2842a1329df24bf93bd5"
     end
     on_intel do
-      url "https://github.com/vrypan/stash/releases/download/v0.9.1/stash-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0162ada567c69e5a87e0e50091c312b843f3b442a5a898c98d76fd76f9adb8bd"
+      url "https://github.com/vrypan/stash/releases/download/v0.10.0/stash-x86_64-linux-gnu.tar.xz"
+      sha256 "0a0ca4a061c460df55651c2c17647a4fe916fcea90cc3497404eb55f2d998f78"
     end
   end
 
   def install
     if which("stash")
-      installed = Utils.safe_popen_read("stash", "version").strip
+      installed = Utils.safe_popen_read("stash", "--version").strip
       version_text =
         if installed =~ /\Astash (\S+)\z/
           Regexp.last_match(1)
@@ -50,20 +50,10 @@ class Stash < Formula
     end
 
     bin.install "stash"
-    bin.install "stash-completion"
     pkgshare.install "scripts" if Dir.exist?("scripts")
-    (bash_completion/"stash").write Utils.safe_popen_read(
-      bin/"stash-completion", "bash"
-    )
-    (zsh_completion/"_stash").write Utils.safe_popen_read(
-      bin/"stash-completion", "zsh"
-    )
-    (fish_completion/"stash.fish").write Utils.safe_popen_read(
-      bin/"stash-completion", "fish"
-    )
   end
 
   test do
-    system "#{bin}/stash", "version"
+    system "#{bin}/stash", "--version"
   end
 end
