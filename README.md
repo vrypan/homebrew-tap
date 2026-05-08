@@ -69,7 +69,7 @@ Alternatively: `brew install vrypan/tap/<FORMULA>` or `brew install --cask vrypa
     <tr style="background:#ffffff;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>shg</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.1.2</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.1.3</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Scan shell history files for accidentally persisted secrets. <br><em>(Last updated: 2026-05-08)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/shg">GitHub</a></small></td>
     </tr>
