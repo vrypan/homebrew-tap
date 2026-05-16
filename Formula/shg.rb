@@ -1,9 +1,9 @@
 class Shg < Formula
   desc "Scan shell history files for accidentally persisted secrets."
   homepage "https://github.com/vrypan/shg"
-  url "https://github.com/vrypan/shg/archive/refs/tags/v0.1.5.tar.gz"
-  sha256 "814735dde1a5b28b209d04ad365313cf3b4f811b5497649e6cd6fafe45fbd578"
-  version "0.1.5"
+  url "https://github.com/vrypan/shg/archive/refs/tags/v0.1.6.tar.gz"
+  sha256 "1bcec45539b48436e10b0112ed30e5819177282f9a5108bd3714fcb8bd1615ea"
+  version "0.1.6"
   license "MIT"
 
   depends_on "zig" => :build
