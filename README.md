@@ -60,27 +60,34 @@ Alternatively: `brew install vrypan/tap/<FORMULA>` or `brew install --cask vrypa
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/lemon3">GitHub</a></small></td>
     </tr>
     <tr style="background:#f6f8fa;">
+      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>lilsync</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.3.1</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Peer-to-peer folder sync for small trusted groups on a LAN. <br><em>(Last updated: 2026-05-17)</em></small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/lilsync">GitHub</a></small></td>
+    </tr>
+    <tr style="background:#ffffff;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>sc-mon</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.1.4</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>sc-mon monitors the status of a Snapchain node. <br><em>(Last updated: 2025-12-27)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/sc-mon">GitHub</a></small></td>
     </tr>
-    <tr style="background:#ffffff;">
+    <tr style="background:#f6f8fa;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>shg</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.1.6</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Scan shell history files for accidentally persisted secrets. <br><em>(Last updated: 2026-05-16)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/shg">GitHub</a></small></td>
     </tr>
-    <tr style="background:#f6f8fa;">
+    <tr style="background:#ffffff;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>snappub-tools</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.2.2</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>A set of tools that implement the basic functionality of snappub <br><em>(Last updated: 2025-11-01)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/snappub-tools">GitHub</a></small></td>
     </tr>
-    <tr style="background:#ffffff;">
+    <tr style="background:#f6f8fa;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>stash</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.10.0</small></td>
