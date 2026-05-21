@@ -4,16 +4,16 @@ class Bckt < Formula
   version "0.6.9"
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/vrypan/bckt/releases/download/v0.6.9/bckt-aarch64-apple-darwin.tar.xz"
-    sha256 "66deeb707a092741236734687a38bb0ce62a1e92589e00a5d0a02adf8c926388"
+    sha256 "1135bc385bcccc13464ba348f449576e709f671fb6b3a21d16e8cabb5a31ca44"
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/vrypan/bckt/releases/download/v0.6.9/bckt-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "d956e4f29a93fe1421bf5f8c680afc84b258ebd796274611cf7d12e6dd77281e"
+      sha256 "6f846d1208c9fb67494f9b96736648895e1ebb6ef74d7dedcf4aa584a19461f7"
     end
     if Hardware::CPU.intel?
       url "https://github.com/vrypan/bckt/releases/download/v0.6.9/bckt-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "2a739e4e19734a9a922849e325f58974b659b44b1584b44343422d3ad6f33872"
+      sha256 "28bec69ba48bb13789b958d4fba292103164e70e326ae83992952a86a92cf220"
     end
   end
   license "MIT"
