@@ -1,28 +1,28 @@
 class Stash < Formula
   desc "A local store for pipeline output and ad hoc file snapshots."
   homepage "https://github.com/vrypan/stash"
-  version "0.10.3"
+  version "0.10.4"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/vrypan/stash/releases/download/v0.10.3/stash-aarch64-macos.tar.xz"
-      sha256 "77e114d4ab3b9db354b87bf46f7121075b0f35a52d7de40abacf6fb3238fd11e"
+      url "https://github.com/vrypan/stash/releases/download/v0.10.4/stash-aarch64-macos.tar.xz"
+      sha256 "1dc995c6795dae61b1e15ba7b633a75fa7bc0bccb6c72d62e17e13f9ea96e02b"
     end
     on_intel do
-      url "https://github.com/vrypan/stash/releases/download/v0.10.3/stash-x86_64-macos.tar.xz"
-      sha256 "57b8e9622e613111154cf17092aed99a7669a9a7a8764bbc31623bba518d0c6e"
+      url "https://github.com/vrypan/stash/releases/download/v0.10.4/stash-x86_64-macos.tar.xz"
+      sha256 "9dea403eb83d9109fec662c8a464395384dc9d933f4bd26d4b6ac300e1549e20"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/vrypan/stash/releases/download/v0.10.3/stash-aarch64-linux-gnu.tar.xz"
-      sha256 "bb1c1668e8fc21fe7b864079f1841c31503dbe3445c6fc3b7a799de976833740"
+      url "https://github.com/vrypan/stash/releases/download/v0.10.4/stash-aarch64-linux-gnu.tar.xz"
+      sha256 "aa93beae7f0a4c11c958d798fbba00a366292b9f19d4ce652a8de63329fdbc88"
     end
     on_intel do
-      url "https://github.com/vrypan/stash/releases/download/v0.10.3/stash-x86_64-linux-gnu.tar.xz"
-      sha256 "3b81fec7adef0950931ddba72e56cb64f8c7ea1ec6a11ee049ae5186fb6c9b53"
+      url "https://github.com/vrypan/stash/releases/download/v0.10.4/stash-x86_64-linux-gnu.tar.xz"
+      sha256 "63beaf6c66df1cf283c4e60c0bd281f3bdb105944c95a09ddcee87d1dc549dbb"
     end
   end
 
@@ -51,6 +51,7 @@ class Stash < Formula
 
     bin.install "stash"
     bin.install "stash-completion"
+    bin.install "stash-bookmark"
     pkgshare.install "scripts" if Dir.exist?("scripts")
     (bash_completion/"stash").write Utils.safe_popen_read(bin/"stash-completion", "bash")
     (zsh_completion/"_stash").write Utils.safe_popen_read(bin/"stash-completion", "zsh")
