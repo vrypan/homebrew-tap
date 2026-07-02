@@ -62,8 +62,8 @@ Alternatively: `brew install vrypan/tap/<FORMULA>` or `brew install --cask vrypa
     <tr style="background:#f6f8fa;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>lilsync</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.3.3</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Peer-to-peer folder sync for small trusted groups on a LAN. <br><em>(Last updated: 2026-06-11)</em></small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.3.4</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Peer-to-peer folder sync for small trusted groups on a LAN. <br><em>(Last updated: 2026-07-02)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/lilsync">GitHub</a></small></td>
     </tr>
     <tr style="background:#ffffff;">
