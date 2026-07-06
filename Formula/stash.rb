@@ -7,22 +7,22 @@ class Stash < Formula
   on_macos do
     on_arm do
       url "https://github.com/vrypan/stash/releases/download/v0.11.0/stash-aarch64-macos.tar.xz"
-      sha256 "432440cfe4c6f563a8a1d7acaecf2cd790394c6acc07d3d2782c723fe81c06cd"
+      sha256 "d9daffec46feeddc1710835571fdea48221006ee76874e6eb8999cd4b5537b85"
     end
     on_intel do
       url "https://github.com/vrypan/stash/releases/download/v0.11.0/stash-x86_64-macos.tar.xz"
-      sha256 "650dfe0b1e4e2519beb83c468ea2fe80d3d128f5d6cf3ca6ae2aefee19c628c9"
+      sha256 "a518f503e6a95bf1c0d8057a588001559ab8ba571aebaf6073b0796c88602f0f"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/vrypan/stash/releases/download/v0.11.0/stash-aarch64-linux-gnu.tar.xz"
-      sha256 "6a09cb87e978a60be0de38cde96acc9913dda1befd40333688a2b34481b00d35"
+      sha256 "eed2f5ef7c2b7c33522a631f252de4e7df8436d12688fb494b778e8482a2199e"
     end
     on_intel do
       url "https://github.com/vrypan/stash/releases/download/v0.11.0/stash-x86_64-linux-gnu.tar.xz"
-      sha256 "97e489175376e9d4f6166274bc5e7452b00c3ef54bc61bc261e9bf968acf50e7"
+      sha256 "06ff0ad4198a522279153de41d24f0603dec0780077a8dd38c423ec2a1db5172"
     end
   end
 
