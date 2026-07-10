@@ -66,13 +66,6 @@ Alternatively: `brew install vrypan/tap/<FORMULA>` or `brew install --cask vrypa
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Peer-to-peer folder sync for small trusted groups on a LAN. <br><em>(Last updated: 2026-07-02)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/lilsync">GitHub</a></small></td>
     </tr>
-    <tr style="background:#ffffff;">
-      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>og</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.1.3</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>A small CLI for generating OpenGraph card images for blog posts and static sites <br><em>(Last updated: 2026-07-10)</em></small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/og">GitHub</a></small></td>
-    </tr>
     <tr style="background:#f6f8fa;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>og-img</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
