@@ -1,25 +1,25 @@
 class OgImg < Formula
   desc "A small CLI for generating OpenGraph card images for blog posts and static sites"
   homepage "https://github.com/vrypan/og-img"
-  version "0.2.2"
+  version "0.2.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/vrypan/og-img/releases/download/v0.2.2/og-img-aarch64-apple-darwin.tar.xz"
-      sha256 "64586dac20c83a32acdc4897236f24e2e94547d46a2c907e34fc946ef6c060da"
+      url "https://github.com/vrypan/og-img/releases/download/v0.2.3/og-img-aarch64-apple-darwin.tar.xz"
+      sha256 "140e3318e143d60caa819fb9287778b8127697824bf9012161bcdfaf4d18bab3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vrypan/og-img/releases/download/v0.2.2/og-img-x86_64-apple-darwin.tar.xz"
-      sha256 "c243dd75661ad5c72bae82d00619f2b199029c96eb67feca05522eeef6d38dc3"
+      url "https://github.com/vrypan/og-img/releases/download/v0.2.3/og-img-x86_64-apple-darwin.tar.xz"
+      sha256 "efc0445bda47ce3b01569e1c142fe95fe46cc1996c2668b86dd42e1a034679db"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/vrypan/og-img/releases/download/v0.2.2/og-img-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "486e3ec41a80017e3af8026a2c444fc7ee4fd39980d0f3972c7cc0b43ca790f2"
+      url "https://github.com/vrypan/og-img/releases/download/v0.2.3/og-img-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "fdd8181db91512c3211004d2b09b8ac9f82b22da7d7316334f44275e3b45cb6d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vrypan/og-img/releases/download/v0.2.2/og-img-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "88f8256736e21a35ccee46790d81db9f83f0dc92a7c32d7fd43fa2fb69981df9"
+      url "https://github.com/vrypan/og-img/releases/download/v0.2.3/og-img-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "98d4c4e0e22ab6e3441d7261b37a8fad39e2693a018a1a6485504eab6304afcc"
     end
   end
   license "MIT"
