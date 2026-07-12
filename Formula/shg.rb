@@ -1,9 +1,9 @@
 class Shg < Formula
-  desc "Scan shell history files for accidentally persisted secrets."
+  desc "Scan histories, environment, and AI agent transcripts for secrets."
   homepage "https://github.com/vrypan/shg"
-  url "https://github.com/vrypan/shg/archive/refs/tags/v0.1.6.tar.gz"
-  sha256 "1bcec45539b48436e10b0112ed30e5819177282f9a5108bd3714fcb8bd1615ea"
-  version "0.1.6"
+  url "https://github.com/vrypan/shg/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "b4ebe7e699e8caedf1f32f60e95466002e9c9f30b1993cd45e7dfb9d06114137"
+  version "0.2.0"
   license "MIT"
 
   depends_on "zig" => :build
@@ -13,7 +13,8 @@ class Shg < Formula
     (share/"shg/extras").install Dir["extras/*"]
     (share/"shg/defaults").install "src/defaults/ignore.default.shg",
                                    "src/defaults/match.default.shg",
-                                   "src/defaults/paths.default.shg"
+                                   "src/defaults/paths.default.shg",
+                                   "src/defaults/paths.deep.default.shg"
   end
 
   test do
