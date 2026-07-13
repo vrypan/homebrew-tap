@@ -1,9 +1,9 @@
 class Shg < Formula
   desc "Scan histories, environment, and AI agent transcripts for secrets."
   homepage "https://github.com/vrypan/shg"
-  url "https://github.com/vrypan/shg/archive/refs/tags/v0.2.3.tar.gz"
-  sha256 "413935214ef8bda5f5b7690ea160059f6579a69ed4d2503305b51ef3f0a0df67"
-  version "0.2.3"
+  url "https://github.com/vrypan/shg/archive/refs/tags/v0.2.4.tar.gz"
+  sha256 "59304308e2ca209bdfe27500265904e458b041d223930bbab7a9a9a5fdb138fc"
+  version "0.2.4"
   license "MIT"
 
   depends_on "zig" => :build
