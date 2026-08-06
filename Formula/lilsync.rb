@@ -1,9 +1,9 @@
 class Lilsync < Formula
   desc "Peer-to-peer folder sync for small trusted groups on a LAN."
   homepage "https://github.com/vrypan/lilsync"
-  url "https://github.com/vrypan/lilsync/archive/refs/tags/v0.3.5.tar.gz"
-  sha256 "365be6282e1ba73b69f21d09185333780b189fe578cc9d0682dd491da03f18c7"
-  version "0.3.5"
+  url "https://github.com/vrypan/lilsync/archive/refs/tags/v0.4.1.tar.gz"
+  sha256 "570ed562d93245510e6f92b87562ec2977bc2343ec4117ba099f66c46204d236"
+  version "0.4.1"
   license "MIT"
   head "https://github.com/vrypan/lilsync.git", branch: "main"
 
