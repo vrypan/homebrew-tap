@@ -1,9 +1,9 @@
 class Tj < Formula
   desc "Persistent, addressable terminal journals"
   homepage "https://github.com/vrypan/tj"
-  url "https://github.com/vrypan/tj/archive/refs/tags/v0.5.3.tar.gz"
-  sha256 "61d99534a780a2467f5ec3653621e9f3e3fc06c96b863ac9a77e4aa3275504f0"
-  version "0.5.3"
+  url "https://github.com/vrypan/tj/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "23b796043983f0bbe887b223c59a7c37af68599aeac99a768ed91255ff1bb76d"
+  version "0.6.0"
   head "https://github.com/vrypan/tj.git", branch: "main"
 
   depends_on "zig@0.16" => :build
@@ -26,9 +26,13 @@ class Tj < Formula
 
   def caveats
     <<~EOS
-      Add the TJ zsh integration to ~/.zshrc:
+      Add the TJ zsh or Fish integration to your shell configuration:
 
+        # zsh
         source #{opt_pkgshare}/tj.plugin.zsh
+
+        # Fish
+        source #{opt_pkgshare}/tj.plugin.fish
     EOS
   end
 
@@ -38,6 +42,7 @@ class Tj < Formula
     end
 
     assert_path_exists pkgshare/"tj.plugin.zsh"
+    assert_path_exists pkgshare/"tj.plugin.fish"
     assert_path_exists bash_completion/"tj"
     assert_path_exists bash_completion/"tjctl"
     assert_path_exists zsh_completion/"_tj"
