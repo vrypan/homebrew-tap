@@ -104,8 +104,8 @@ Alternatively: `brew install vrypan/tap/<FORMULA>` or `brew install --cask vrypa
     <tr style="background:#f6f8fa;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>tj</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.5.3</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Persistent, addressable terminal journals <br><em>(Last updated: 2026-09-02)</em></small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.6.0</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Persistent, addressable terminal journals <br><em>(Last updated: 2026-09-03)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/tj">GitHub</a></small></td>
     </tr>
   </tbody>
