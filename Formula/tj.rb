@@ -1,9 +1,9 @@
 class Tj < Formula
   desc "Persistent, addressable terminal journals"
   homepage "https://github.com/vrypan/tj"
-  url "https://github.com/vrypan/tj/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "23b796043983f0bbe887b223c59a7c37af68599aeac99a768ed91255ff1bb76d"
-  version "0.6.0"
+  url "https://github.com/vrypan/tj/archive/refs/tags/v0.6.1.tar.gz"
+  sha256 "21f8ee2d5c318d8f12a62c1327cfc1916fe076d93e71942fd4b05665de44a8ad"
+  version "0.6.1"
   head "https://github.com/vrypan/tj.git", branch: "main"
 
   depends_on "zig@0.16" => :build
@@ -37,7 +37,7 @@ class Tj < Formula
   end
 
   test do
-    %w[tj tjctl tj-fence tj-grep tj-tape].each do |tool|
+    %w[tj tjctl].each do |tool|
       assert_path_exists bin/tool
     end
 
