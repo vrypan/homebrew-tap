@@ -1,9 +1,9 @@
 class Tj < Formula
   desc "Persistent, addressable terminal journals"
   homepage "https://github.com/vrypan/tj"
-  url "https://github.com/vrypan/tj/archive/refs/tags/v0.7.1.tar.gz"
-  sha256 "6ff34d4c35d823e9ab969ee648996ff2d76b3412fdc5de94fb97056aebff5caf"
-  version "0.7.1"
+  url "https://github.com/vrypan/tj/archive/refs/tags/v0.7.2.tar.gz"
+  sha256 "7fbdb8ff95bd63bb6430fd0c28816420d487a2e86dfa0936150c02d3abcaddd1"
+  version "0.7.2"
   head "https://github.com/vrypan/tj.git", branch: "main"
 
   depends_on "zig@0.16" => :build
