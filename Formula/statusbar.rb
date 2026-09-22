@@ -1,9 +1,9 @@
 class Statusbar < Formula
   desc "Status bar for any terminal"
   homepage "https://github.com/vrypan/statusbar"
-  url "https://github.com/vrypan/statusbar/archive/refs/tags/v0.2.3.tar.gz"
-  sha256 "dce6d01920ffcaf501b065c0951fc817a01ece56972e6671d8f6f923d56cd623"
-  version "0.2.3"
+  url "https://github.com/vrypan/statusbar/archive/refs/tags/v0.3.0.tar.gz"
+  sha256 "2a1785b9b2d4a58450ad70e4d2531e81cc3b7cbc1af2a70ad2498f3fad6910c7"
+  version "0.3.0"
   head "https://github.com/vrypan/statusbar.git", branch: "main"
 
   depends_on "zig@0.16" => :build
