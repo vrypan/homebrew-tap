@@ -104,7 +104,7 @@ Alternatively: `brew install vrypan/tap/<FORMULA>` or `brew install --cask vrypa
     <tr style="background:#f6f8fa;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>statusbar</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
-      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.4.0</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.4.1</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Status bar for any terminal <br><em>(Last updated: 2026-09-25)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/statusbar">GitHub</a></small></td>
     </tr>
