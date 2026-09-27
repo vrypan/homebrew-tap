@@ -1,9 +1,9 @@
 class Statusbar < Formula
   desc "Status bar for any terminal"
   homepage "https://github.com/vrypan/statusbar"
-  url "https://github.com/vrypan/statusbar/archive/refs/tags/v0.4.2.tar.gz"
-  sha256 "45fd182ba79a584d8f8313729b823790093f7d3af4a5ba5c83e0ee7425b96f49"
-  version "0.4.2"
+  url "https://github.com/vrypan/statusbar/archive/refs/tags/v0.4.3.tar.gz"
+  sha256 "a5060320b9b1bbe454c1eab4b227c841f9cf4053b783dc42bfb7cdc4c868b448"
+  version "0.4.3"
   head "https://github.com/vrypan/statusbar.git", branch: "main"
 
   depends_on "zig@0.16" => :build
@@ -26,6 +26,8 @@ class Statusbar < Formula
     <<~EOS
       Browse the bundled themes inside a running statusbar session:
         statusbar-theme
+      For AI-assisted setup and theme design, see:
+        #{opt_pkgshare}/AGENT_SETUP.md
     EOS
   end
 
@@ -34,6 +36,7 @@ class Statusbar < Formula
     assert_path_exists bin/"statusbar-theme"
     assert_path_exists pkgshare/"themes/pure.config"
     assert_path_exists pkgshare/"themes/pure-native.config"
+    assert_path_exists pkgshare/"AGENT_SETUP.md"
     assert_match "Usage: statusbar-theme", shell_output("#{bin}/statusbar-theme --help")
     assert_match "Default directory: #{opt_pkgshare}/themes", shell_output("#{bin}/statusbar-theme --help")
     assert_match version.to_s, shell_output("#{bin}/statusbar --version")
