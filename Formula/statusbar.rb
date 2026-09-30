@@ -1,9 +1,9 @@
 class Statusbar < Formula
   desc "Status bar for any terminal"
   homepage "https://github.com/vrypan/statusbar"
-  url "https://github.com/vrypan/statusbar/archive/refs/tags/v0.4.3.tar.gz"
-  sha256 "a5060320b9b1bbe454c1eab4b227c841f9cf4053b783dc42bfb7cdc4c868b448"
-  version "0.4.3"
+  url "https://github.com/vrypan/statusbar/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "fe81c789090a503e9ac37c2416b8a06cf83695abb302effd52de0d6c2fafc75d"
+  version "0.5.0"
   head "https://github.com/vrypan/statusbar.git", branch: "main"
 
   depends_on "zig@0.16" => :build
@@ -34,12 +34,12 @@ class Statusbar < Formula
   test do
     assert_path_exists bin/"statusbar"
     assert_path_exists bin/"statusbar-theme"
-    assert_path_exists pkgshare/"themes/pure.config"
-    assert_path_exists pkgshare/"themes/pure-native.config"
+    assert_path_exists pkgshare/"themes/pure.statusbar"
+    assert_path_exists pkgshare/"themes/pure-native.statusbar"
     assert_path_exists pkgshare/"AGENT_SETUP.md"
     assert_match "Usage: statusbar-theme", shell_output("#{bin}/statusbar-theme --help")
     assert_match "Default directory: #{opt_pkgshare}/themes", shell_output("#{bin}/statusbar-theme --help")
     assert_match version.to_s, shell_output("#{bin}/statusbar --version")
-    assert_match "[line.1]", shell_output("#{bin}/statusbar config --default")
+    assert_match "[line.prompt]", shell_output("#{bin}/statusbar config --default")
   end
 end
