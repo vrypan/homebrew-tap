@@ -32,83 +32,90 @@ Alternatively: `brew install vrypan/tap/<FORMULA>` or `brew install --cask vrypa
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/bckt">GitHub</a></small></td>
     </tr>
     <tr style="background:#f6f8fa;">
+      <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>codex-usage</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Unknown</small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Read Codex quota, credits, and token activity from the local daemon <br><em>(Last updated: 2026-10-02)</em></small></td>
+      <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/codex-usage">GitHub</a></small></td>
+    </tr>
+    <tr style="background:#ffffff;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>fargo</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.4.5</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>fargo is a CLI interface to Farcaster written in Go. <br><em>(Last updated: 2025-12-20)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/fargo">GitHub</a></small></td>
     </tr>
-    <tr style="background:#ffffff;">
+    <tr style="background:#f6f8fa;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>fc-appkey</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.1.5</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Farcaster Application Key Generator <br><em>(Last updated: 2025-10-31)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/fc-appkey">GitHub</a></small></td>
     </tr>
-    <tr style="background:#f6f8fa;">
+    <tr style="background:#ffffff;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>fcp</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>1.1.3</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Copy data from/to farcaster and the local filesystem <br><em>(Last updated: 2025-12-20)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/fcp">GitHub</a></small></td>
     </tr>
-    <tr style="background:#ffffff;">
+    <tr style="background:#f6f8fa;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>lemon3</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.4.1</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>lemon3 is a filesharing system using Farcaster and IPFS. <br><em>(Last updated: 2025-12-27)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/lemon3">GitHub</a></small></td>
     </tr>
-    <tr style="background:#f6f8fa;">
+    <tr style="background:#ffffff;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>lilsync</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.4.1</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Peer-to-peer folder sync for small trusted groups on a LAN. <br><em>(Last updated: 2026-08-06)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/lilsync">GitHub</a></small></td>
     </tr>
-    <tr style="background:#ffffff;">
+    <tr style="background:#f6f8fa;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>og-img</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.2.3</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>A small CLI for generating OpenGraph card images for blog posts and static sites <br><em>(Last updated: 2026-07-11)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/og-img">GitHub</a></small></td>
     </tr>
-    <tr style="background:#f6f8fa;">
+    <tr style="background:#ffffff;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>sc-mon</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.1.4</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>sc-mon monitors the status of a Snapchain node. <br><em>(Last updated: 2025-12-27)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/sc-mon">GitHub</a></small></td>
     </tr>
-    <tr style="background:#ffffff;">
+    <tr style="background:#f6f8fa;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>shg</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.2.6</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Scan histories, environment, and AI agent transcripts for secrets. <br><em>(Last updated: 2026-07-13)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/shg">GitHub</a></small></td>
     </tr>
-    <tr style="background:#f6f8fa;">
+    <tr style="background:#ffffff;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>snappub-tools</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.2.2</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>A set of tools that implement the basic functionality of snappub <br><em>(Last updated: 2025-11-01)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/snappub-tools">GitHub</a></small></td>
     </tr>
-    <tr style="background:#ffffff;">
+    <tr style="background:#f6f8fa;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>stash</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.11.0</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>A local store for pipeline output and ad hoc file snapshots. <br><em>(Last updated: 2026-07-06)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/stash">GitHub</a></small></td>
     </tr>
-    <tr style="background:#f6f8fa;">
+    <tr style="background:#ffffff;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>statusbar</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.5.1</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Status bar for any terminal <br><em>(Last updated: 2026-09-30)</em></small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small><a href="https://github.com/vrypan/statusbar">GitHub</a></small></td>
     </tr>
-    <tr style="background:#ffffff;">
+    <tr style="background:#f6f8fa;">
       <td style="border:1px solid #d0d7de; padding:6px 12px; white-space:nowrap;"><small>tj</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>Formula</small></td>
       <td style="border:1px solid #d0d7de; padding:6px 12px;"><small>0.8.0</small></td>
