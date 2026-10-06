@@ -1,12 +1,12 @@
 class Statusbar < Formula
   desc "Status bar for any terminal"
   homepage "https://github.com/vrypan/statusbar"
-  url "https://github.com/vrypan/statusbar/archive/refs/tags/v0.5.1.tar.gz"
-  sha256 "6ee2dd49f6bb1f49d460e20ab21df12677f7f734266163812c67ece14e17d64d"
-  version "0.5.1"
+  url "https://github.com/vrypan/statusbar/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "23bb84129a2f118e0cace46caeee8eefe742908fdd85a584e24850cefd72d605"
+  version "0.6.0"
   head "https://github.com/vrypan/statusbar.git", branch: "main"
 
-  depends_on "zig@0.16" => :build
+  depends_on "zig@0.17" => :build
 
   # Homebrew permits network access during fetch, then builds offline. Keep
   # Zig's dependency cache in the retained build tree for the build step.
@@ -17,8 +17,9 @@ class Statusbar < Formula
 
   def install
     ENV["ZIG_GLOBAL_CACHE_DIR"] = (buildpath/".zig-global-cache").to_s
-    system "zig", "build", "-Doptimize=ReleaseSafe",
-           "-Ddefault-themes-dir=#{opt_pkgshare}/themes", "--prefix", prefix
+    system "zig", "build", "-Doptimize=safe",
+           "-Ddefault-themes-dir=#{opt_pkgshare}/themes",
+           "-Ddefault-modules-dir=#{opt_pkgshare}/modules", "--prefix", prefix
     generate_completions_from_executable bin/"statusbar", "completion"
   end
 
@@ -34,8 +35,8 @@ class Statusbar < Formula
   test do
     assert_path_exists bin/"statusbar"
     assert_path_exists bin/"statusbar-theme"
-    assert_path_exists pkgshare/"themes/pure.statusbar"
-    assert_path_exists pkgshare/"themes/pure-native.statusbar"
+    assert_path_exists pkgshare/"themes/pure.stbt"
+    assert_path_exists pkgshare/"themes/pure-color.stbt"
     assert_path_exists pkgshare/"AGENT_SETUP.md"
     assert_match "Usage: statusbar-theme", shell_output("#{bin}/statusbar-theme --help")
     assert_match "Default directory: #{opt_pkgshare}/themes", shell_output("#{bin}/statusbar-theme --help")
